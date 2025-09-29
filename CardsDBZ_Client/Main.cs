@@ -7,8 +7,8 @@ namespace CardsDBZ_Client
 {
     public partial class Main : Form
     {
-        private string _url = "http://cardsdbz.somee.com/lobby";
-        //private string _url = "https://localhost:7012/lobby";
+        //private string _url = "http://cardsdbz.somee.com/lobby";
+        private string _url = "https://localhost:7012/lobby";
         private HubConnection _connection;
         private string _playerName;
         public Main()
@@ -31,6 +31,7 @@ namespace CardsDBZ_Client
                 Invoke(new Action(() =>
                 {
                     txtName.ReadOnly = false;
+                    txtPlayerList.Text = "Se perdió la cconexión";
                     btnJoin.Enabled = true;
                 }
                 ));
@@ -58,6 +59,7 @@ namespace CardsDBZ_Client
                 MessageBox.Show("Error al conectarse al servidor", "Connection error");
                 txtName.ReadOnly = false;
                 btnJoin.Enabled = true;
+                txtPlayerList.Text = "Error al conectar";
             }
         }
 
