@@ -36,6 +36,7 @@
             label2 = new Label();
             txtName = new TextBox();
             timePlayerListUpdate = new System.Windows.Forms.Timer(components);
+            tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
@@ -50,6 +51,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
             tableLayoutPanel1.Controls.Add(txtPlayerList, 2, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 1, 1);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 3, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.GrowStyle = TableLayoutPanelGrowStyle.FixedSize;
             tableLayoutPanel1.Location = new Point(0, 0);
@@ -128,6 +130,21 @@
             timePlayerListUpdate.Interval = 5000;
             timePlayerListUpdate.Tick += timePlayerListUpdate_Tick;
             // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.523809F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 90.47619F));
+            tableLayoutPanel3.Location = new Point(613, 13);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 3;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 313F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 654F));
+            tableLayoutPanel3.Size = new Size(1344, 1016);
+            tableLayoutPanel3.TabIndex = 4;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -153,5 +170,6 @@
         private Label label2;
         private TextBox txtName;
         private System.Windows.Forms.Timer timePlayerListUpdate;
+        private TableLayoutPanel tableLayoutPanel3;
     }
 }
