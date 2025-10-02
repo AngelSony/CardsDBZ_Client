@@ -186,7 +186,7 @@
             ClientSize = new Size(1024, 986);
             Controls.Add(tableLayoutPanel1);
             Name = "Main";
-            Text = "Main Menu";
+            Text = "Menú Principal";
             Load += Main_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
