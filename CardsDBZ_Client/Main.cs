@@ -130,6 +130,7 @@ namespace CardsDBZ_Client
                 _joinButtons[i].Enabled = false;
             
             int rowCount = 0;
+            //For the tables I had loaded, check if they need to be updated or removed
             foreach(TableData table in _tableList.Values)
             {
                 if (newTables.ContainsKey(table.TableId))
@@ -145,6 +146,7 @@ namespace CardsDBZ_Client
                 }
                 newTables.Remove(table.TableId);
             }
+            //The remaining ones will be added
             foreach(TableData table in newTables.Values)
             {
                 //Add table
