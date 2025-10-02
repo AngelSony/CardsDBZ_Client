@@ -70,6 +70,7 @@
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel2.AutoScroll = true;
             tableLayoutPanel2.ColumnCount = 2;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -153,6 +154,7 @@
             btnUpdate.BackgroundImage = Properties.Resources.updateIcon;
             btnUpdate.BackgroundImageLayout = ImageLayout.Zoom;
             btnUpdate.Dock = DockStyle.Fill;
+            btnUpdate.Enabled = false;
             btnUpdate.Location = new Point(340, 4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(54, 54);

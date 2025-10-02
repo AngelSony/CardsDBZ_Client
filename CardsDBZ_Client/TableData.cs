@@ -16,8 +16,8 @@
         public TableStates TableState => _tableState;
         public enum TableStates
         {
-            OnGame,
-            Idle
+            InGame,
+            Free
         }
     }
 }
