@@ -12,8 +12,8 @@ namespace CardsDBZ_Client
 {
     public partial class Main : Form
     {
-        //private string _url = "http://cardsdbz.somee.com/lobby";
-        private string _url = "https://localhost:7012/lobby";
+        private string _url = "http://cardsdbz.somee.com/lobby";
+        //private string _url = "https://localhost:7012/lobby";
         private HubConnection _connection;
         private Player _player;
         private Dictionary<int, TableData> _tableList;
